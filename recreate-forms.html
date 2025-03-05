@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Bästa glassen: <br>
+        <input type="radio" name="glass" value="Vanilj"> Vanilj <br>
+        <input type="radio" name="glass" value="Choklad"> Choklad <br>
+        <input type="radio" name="glass" value="Jordgubb"> Jordgubb <br>
+        Bästa bilen: <br>
+        <input type="radio" name="bil" value="Volvo"> Volvo <br>
+        <input type="radio" name="bil" value="Saab"> Saab <br>
+        <input type="radio" name="bil" value="Ford"> Audi <br>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Intressen: <br>
+        <input type="checkbox" name="intresse" value="Fotboll"> Fotboll <br>
+        <input type="checkbox" name="intresse" value="Hockey"> Hockey <br>
+        <input type="checkbox" name="intresse" value="Tennis"> Tennis <br>
+        <input type="checkbox" name="intresse" value="Golf"> Golf <br>
+        <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Vad är din favoritfärg? <input type="color" name="favcolor"> <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        När är du född: <input type="date" name="birthdate"> <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        När vill du boka möte: <input type="datetime-local" name="meeting"> <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Email: <input type="email" name="email"> <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        First Name: <br>
+        <input type="text" name="firstname"> <br>
+        Last Name: <br>
+        <input type="text" name="lastname"> <br>
+        <input type="image" src="images/piccolo.webp" alt="submit" width="48" height="48">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Ladda upp profilbild: <input type="file" name="profilepic"> <br>
+        <input type="submit" value="Skicka"> 
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Hur bra är läraren? (1-10) <input type="range" name="teacher" min="0" max="10"> <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Choose a car: <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        Skriv en dikt: <br>
+        <textarea name="poem" rows="4" cols="50"></textarea> <br>
+        <input type="submit" value="Skicka">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        <fieldset>
+            <fieldset>
+                <legend>Människa</legend>
+                <label for="fname">Förnamn:</label> <br>
+                <input type="text" id="name" name="name"> <br>
+                <label for="lname">Efternamn:</label> <br>
+                <input type="text" id="lname" name="lname"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Hund</legend>
+                <label for="hname">Hundnamn:</label> <br>
+                <input type="text" id="hname" name="hname"> <br>
+                <label for="cnum">Chipnummer:</label> <br>
+                <input type="text" id="cnum" name="cnum"> <br>
+            </fieldset>
+            <input type="submit" value="Skicka">
+        </fieldset>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <form>
+        <fieldset>
+            <label for="fname">Username:</label> <br>
+            <input type="text" id="fname" name="fname"> <br>
+            <label for="lname">Password:</label> <br>
+            <input type="password" id="lname" name="lname"> <br>
+            <input type="submit" value="Skicka">
+        </fieldset>
+    </form>
+</body>
+</html>
