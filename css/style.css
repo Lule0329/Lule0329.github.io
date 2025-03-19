@@ -7,9 +7,10 @@
 }
 body {
     margin: auto;
-    background-color: black;
     text-align: center;
     color: lime;
+    background-image: url("/media/images/cobbleWall1.png");
+    background-attachment: fixed;
 }
 p {
     width: 40%;
@@ -33,5 +34,16 @@ p {
     background-image: url("/media/images/skullWallDoom.png");
     background-repeat: repeat-x;
     background-size: 4%;
-    background-attachment: fixed;
+    background-attachment: absolute;
+}
+.tables {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+.images {
+    width: 20%;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
