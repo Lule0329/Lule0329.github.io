@@ -13,7 +13,6 @@ body {
     background-attachment: fixed;
 }
 p {
-    width: 40%;
     margin: auto;
 }
 .rubrik{
@@ -49,4 +48,10 @@ p {
 }
 .linkOther {
     background-color: white;
+}
+.content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    text-align: center;
 }
