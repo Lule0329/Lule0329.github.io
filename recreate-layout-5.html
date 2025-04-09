@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0%;
+        }
+        body {
+            display: grid;
+            grid-template-rows: 20vh 30vh 30vh 20vh;
+            grid-template-columns: 20% 40% 40%;
+            grid-template-areas: 
+                "header header header"
+                "nav section1 section2"
+                "nav section3 section4"
+                "footer footer footer";
+        }
+        @media screen and (max-width: 767px) {
+            body {
+                grid-template-rows: 150px 20vh 20vh 20vh 20vh 150px;
+                grid-template-columns: 30% 70%;
+                grid-template-areas: 
+                "header header"
+                "nav section1"
+                "nav section2"
+                "nav section3"
+                "nav section4"
+                "footer footer";
+            }
+        }
+        @media screen and (max-width: 480px) {
+            body {
+                grid-template-rows: 150px 20vh 20vh 20vh 20vh 20vh 150px;
+                grid-template-columns: 100%;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section1"
+                "section2"
+                "section3"
+                "section4"
+                "footer";
+            }
+        }
+        .header {
+            grid-area: header;
+            background-color: lightskyblue;
+        }
+        .nav {
+            grid-area: nav;
+            background-color: lightblue;
+        }
+        .section1 {
+            grid-area: section1;
+            background-color: pink;
+        }
+        .section2 {
+            grid-area: section2;
+            background-color: lightpink;
+        }
+        .section3 {
+            grid-area: section3;
+            background-color: lightpink;
+        }
+        .section4 {
+            grid-area: section4;
+            background-color: pink;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: lightskyblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>header</h1>
+    </div>
+
+    <div class="nav">
+        <h1>navigation</h1>
+    </div>
+
+    <div class="section1">
+        <h1>section 1</h1>
+    </div>
+
+    <div class="section2">
+        <h1>section 2</h1>
+    </div>
+
+    <div class="section3">
+        <h1>section 3</h1>
+    </div>
+
+    <div class="section4">
+        <h1>section 4</h1>
+    </div>
+
+    <div class="footer">
+        <h1>footer</h1>
+    </div>
+</body>
+</html>
