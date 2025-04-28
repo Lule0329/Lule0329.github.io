@@ -1,56 +1,33 @@
 * {
-    margin-top: 50px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "consolas", Arial, sans-serif;
 }
-body {
-    margin: auto;
-    text-align: center;
-    color: lime;
-    background-image: url("/media/images/cobbleWall1.png");
-    background-attachment: fixed;
+div.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
-p {
-    margin: auto;
+div.container {
+    width: 1000px;
+    height: 100vh;
+    background-color: lightgray;
 }
-.rubrik{
-    text-align: fixed;
-    margin-bottom: 50px;
-    margin-top: 25px;
-}
-#line {
-    color: lime;
-}
-.banner {
+div.header {
     width: 100%;
     height: 100px;
-    position: left;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.header {
 
-    line-height: 75px;
-
-    background-image: url("/media/images/skullWallDoom.png");
-    background-repeat: repeat-x;
-    background-size: 4%;
-    background-attachment: absolute;
 }
-.tables {
-    width: 20%;
-    margin: auto;
-    text-align: center;
-    border-collapse: collapse;
-}
-.images {
-    width: 20%;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.linkOther {
-    background-color: white;
-}
-.content {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+div.nav {
+    background-color: darkgray;
+    height: 50px;
+    width: 1000px;
 }
