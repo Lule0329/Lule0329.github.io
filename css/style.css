@@ -11,7 +11,7 @@ div.main {
 }
 div.container {
     width: 1000px;
-    height: 100vh;
+    height: 100%;
     background-color: lightgray;
     border-radius: 10px;
 }
@@ -61,8 +61,9 @@ div.list {
 div.item {
     height: 200px;
     background-color: darkgray;
-    color: white;
+    color: black;
     border-radius: 10px;
+    margin-bottom: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 div.item:hover {
@@ -70,8 +71,30 @@ div.item:hover {
     background-color: white;
     box-shadow: 0px 0px 5px black;
 }
-div.productImage {
+img.productImage {
+    float: left;
     height: 200px;
     width: 200px;
     border-radius: 10px;
+}
+h1.productTitle {
+    padding-top: 5px;
+}
+div.productDesc {
+    padding-top: 5px;
+    height: 100px;
+}
+p.productDesc {
+    font-size: x-large;  
+}
+img.addToCart {
+    float: right;
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+    scale: 1;
+    transition: transform 0.2s ease;
+}
+img.addToCart:hover {
+    transform: scale(1.2);
 }
