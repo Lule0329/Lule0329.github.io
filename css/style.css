@@ -98,3 +98,16 @@ img.addToCart {
 img.addToCart:hover {
     transform: scale(1.2);
 }
+div.text {
+    padding: 20px;
+    width: 1000px;
+    height: 1000px;
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
