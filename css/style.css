@@ -54,10 +54,17 @@ div.button:hover {
 }
 div.list {
     width: 1000px;
+    height: auto;
     padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
 }
 div.item {
     height: 200px;
+    width: 400px;
     background-color: darkgray;
     color: black;
     border-radius: 10px;
@@ -109,6 +116,10 @@ table {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+}
 @media screen and (max-width: 1000px) {
     div.container {
         width: 100%;
@@ -120,7 +131,7 @@ table {
     div.list {
         width: 100%;
     }
-    div.item {
-        
+    div.text {
+        width: 100%;
     }
 }
