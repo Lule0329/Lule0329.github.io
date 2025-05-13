@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Consolas", "Courier New", monospace;
+}
+body {
+    
+    background-image: url("https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif");
+    background-color: black;
 }
 div.main {
     width: 100%;
@@ -12,21 +18,21 @@ div.main {
 div.container {
     width: 1000px;
     height: 100%;
-    background-color: lightgray;
+    background-color: rgb(34, 34, 34);
     border-radius: 10px;
 }
 div.header {
     width: 100%;
     height: 100px;
-    background-color: #333;
-    color: white;
+    background-color: rgb(34, 34, 34);
+    color: lime;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
 div.nav {
-    background-color: darkgray;
+    background-color: lime;
     height: 50px;
     width: 1000px;
     display: flex;
@@ -35,8 +41,8 @@ div.nav {
     border-radius: 10px;
 }
 div.button {
-    color: white;
-    background-color: #333;
+    color: lime;
+    background-color: rgb(34, 34, 34);
     height: 30px;
     width: 100px;
     text-align: center;
@@ -65,8 +71,8 @@ div.list {
 div.item {
     height: 200px;
     width: 400px;
-    background-color: darkgray;
-    color: black;
+    background-color: lime;
+    color: rgb(34, 34, 34);
     border-radius: 10px;
     margin-bottom: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -108,6 +114,7 @@ div.text {
     width: 1000px;
     height: 1000px;
     text-align: center;
+    color: lime;
 }
 table {
     margin-left: auto;
@@ -118,7 +125,7 @@ table {
 }
 th, td {
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid lime;
 }
 @media screen and (max-width: 1000px) {
     div.container {
@@ -134,4 +141,10 @@ th, td {
     div.text {
         width: 100%;
     }
+}
+img.cartIcon {
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+    float: right;   
 }
