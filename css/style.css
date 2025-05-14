@@ -21,6 +21,32 @@ div.container {
     background-color: rgb(34, 34, 34);
     border-radius: 10px;
 }
+div.GridContainer {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-areas: 
+        "content ad",
+        "content ad",
+        "content ad";
+}
+div.content {
+    color: lime;
+    padding: 20px;
+    font-size: larger;
+}
+div.advertisement {
+    background-color: lime;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
+img.adImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 div.header {
     width: 100%;
     height: 100px;
@@ -70,7 +96,7 @@ div.list {
 }
 div.item {
     height: 200px;
-    width: 400px;
+    width: 450px;
     background-color: lime;
     color: rgb(34, 34, 34);
     border-radius: 10px;
@@ -127,6 +153,12 @@ th, td {
     padding: 5px;
     border: 1px solid lime;
 }
+img.cartIcon {
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+    float: right;   
+}
 @media screen and (max-width: 1000px) {
     div.container {
         width: 100%;
@@ -141,10 +173,13 @@ th, td {
     div.text {
         width: 100%;
     }
-}
-img.cartIcon {
-    height: 50px;
-    width: 50px;
-    padding-right: 10px;
-    float: right;   
+    div.item {
+        width: 400px;
+    }
+    div.GridContainer {
+        grid-template-areas: 
+            "content content",
+            "content content",
+            "content content";
+    }
 }
