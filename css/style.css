@@ -26,9 +26,9 @@ div.GridContainer {
     grid-template-columns: 70% 30%;
     grid-template-rows: 40% 30% 30%;
     grid-template-areas: 
-        "content ad",
-        "content ad",
-        "content ad";
+        "content advertisement",
+        "content advertisement",
+        "content advertisement";
 }
 div.content {
     color: lime;
@@ -38,6 +38,7 @@ div.content {
 div.advertisement {
     background-color: lime;
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     width: 100%;
     height: 500px;
@@ -181,5 +182,8 @@ img.cartIcon {
             "content content",
             "content content",
             "content content";
+    }
+    div.advertisement {
+        display: none;
     }
 }
