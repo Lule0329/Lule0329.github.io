@@ -29,11 +29,17 @@
                     </div>
                 </a>
 
-                <a href="cart.html">
-                    <div class="button">
+                <a href="#">
+                    <div class="button" id="toggle-cart">
                         <p>Cart</p>
                     </div>
                 </a>
+                
+                <div class="popup" id="cart-popup">
+                    <h2>Your Cart</h2>
+                    <ul id="cart-items"></ul>
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                </div>
 
                 <a href="about.html">
                     <div class="button">
@@ -55,7 +61,8 @@
                     <div class="productDesc">
                         <p class="productDesc">4GB - 20$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="2" data-name="RAM8GB" data-price="40">
@@ -64,7 +71,8 @@
                     <div class="productDesc">
                         <p class="productDesc">8GB - 40$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="3" data-name="RAM16GB" data-price="80">
@@ -73,7 +81,8 @@
                     <div class="productDesc">
                         <p class="productDesc">16GB - 80$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="4" data-name="RAM32GB" data-price="160">
@@ -82,7 +91,8 @@
                     <div class="productDesc">
                         <p class="productDesc">32GB - 160$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="5" data-name="RAM64GB" data-price="240">
@@ -91,7 +101,8 @@
                     <div class="productDesc">
                         <p class="productDesc">64GB - 240$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="6" data-name="RAM128GB" data-price="480">
@@ -100,7 +111,8 @@
                     <div class="productDesc">
                         <p class="productDesc">128GB - 480$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="7" data-name="RAM256GB" data-price="960">
@@ -109,7 +121,8 @@
                     <div class="productDesc">
                         <p class="productDesc">256GB - 960$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="8" data-name="RAM512GB" data-price="1920">
@@ -118,7 +131,8 @@
                     <div class="productDesc">
                         <p class="productDesc">512GB - 1920$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="9" data-name="RAM1024GB" data-price="3840">
@@ -127,7 +141,8 @@
                     <div class="productDesc">
                         <p class="productDesc">1024GB - 3840$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <div class="item" data-id="10" data-name="RAM2048GB" data-price="7680">
@@ -136,49 +151,32 @@
                     <div class="productDesc">
                         <p class="productDesc">2048GB - 7680$</p>
                     </div>
-                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg" alt="add to cart"></a>
+                    <a href="" class="addToCart"><img class="addToCart" src="images/addtocart.svg"
+                            alt="add to cart"></a>
                 </div>
 
                 <script>
-                    // sparar cart till localstorage
+                    document.getElementById('toggle-cart').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const popup = document.getElementById('cart-popup');
+                        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+                    });
+
+                    const cart = [];
+                    const cartItemsEl = document.getElementById('cart-items');
+                    const cartTotalEl = document.getElementById('cart-total');
+
                     function saveCart() {
                         localStorage.setItem('cart', JSON.stringify(cart));
                     }
 
-                    // laddar cart från localstorage
                     function loadCart() {
                         const savedCart = localStorage.getItem('cart');
                         if (savedCart) {
-                            cart.splice(0, cart.length, ...JSON.parse(savedCart)); // replace contents of cart
+                            cart.splice(0, cart.length, ...JSON.parse(savedCart));
                             updateCart();
                         }
                     }
-
-                    //sätter ihop allt
-                    const cart = [];
-                    const cartItemsEl = document.getelemntById('cart-items');
-                    const cartCountEl = document.getElementById('cart-total');
-
-                    window.addEventListener('DOMContentLoaded', loadCart);
-
-                    document.querySelectorAll('addToCart').forEach(button => {
-                        button.addEventListener('click', () => {
-                            const productEl = button.closest('.item');
-                            const id = productEl.dataset.id;
-                            const name = productEl.dataset.name;
-                            const price = parseFloat(productEl.dataset.price);
-
-                            const existingProduct = cart.find(item => item.id === id);
-                            if (existingProduct) {
-                                existingProduct.quantity += 1;
-                            } else {
-                                cart.push({ id, name, price, quantity: 1 });
-                            }
-
-                            updateCart();
-                            saveCart();
-                        });
-                    });
 
                     function updateCart() {
                         cartItemsEl.innerHTML = '';
@@ -194,17 +192,30 @@
                         cartTotalEl.textContent = total.toFixed(2);
                     }
 
-                    function saveCart() {
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                    }
+                    document.addEventListener('DOMContentLoaded', () => {
+                        loadCart();
 
-                    function loadCart() {
-                        const savedCart = localStorage.getItem('cart');
-                        if (savedCart) {
-                            cart.splice(0, cart.length, ...JSON.parse(savedCart)); // replace cart contents
-                            updateCart();
-                        }
-                    }
+                        document.querySelectorAll('.addToCart').forEach(button => {
+                            button.addEventListener('click', (e) => {
+                                e.preventDefault(); // Hindra länkens standardbeteende
+
+                                const productEl = button.closest('.item');
+                                const id = productEl.dataset.id;
+                                const name = productEl.dataset.name;
+                                const price = parseFloat(productEl.dataset.price);
+
+                                const existingProduct = cart.find(item => item.id === id);
+                                if (existingProduct) {
+                                    existingProduct.quantity += 1;
+                                } else {
+                                    cart.push({ id, name, price, quantity: 1 });
+                                }
+
+                                updateCart();
+                                saveCart();
+                            });
+                        });
+                    });
                 </script>
             </div>
         </div>
