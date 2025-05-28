@@ -4,37 +4,43 @@
     box-sizing: border-box;
     font-family: "Consolas", "Courier New", monospace;
 }
+
 body {
-    
+
     background-image: url("https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif");
     background-color: black;
 }
+
 div.main {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
+
 div.container {
     width: 1000px;
     height: 100%;
     background-color: rgb(34, 34, 34);
     border-radius: 10px;
 }
+
 div.GridContainer {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 40% 30% 30%;
-    grid-template-areas: 
+    grid-template-areas:
         "content advertisement",
         "content advertisement",
         "content advertisement";
 }
+
 div.content {
     color: lime;
     padding: 20px;
     font-size: larger;
 }
+
 div.advertisement {
     background-color: lime;
     margin-top: 20px;
@@ -43,11 +49,13 @@ div.advertisement {
     width: 100%;
     height: 500px;
 }
+
 img.adImage {
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
+
 div.header {
     width: 100%;
     height: 100px;
@@ -58,6 +66,7 @@ div.header {
     align-items: center;
     border-radius: 10px;
 }
+
 div.nav {
     background-color: lime;
     height: 50px;
@@ -68,7 +77,9 @@ div.nav {
     border-radius: 10px;
     position: relative;
 }
-div.button, div.cartButton {
+
+div.button,
+div.cartButton {
     color: lime;
     background-color: rgb(34, 34, 34);
     height: 30px;
@@ -81,21 +92,45 @@ div.button, div.cartButton {
     box-shadow: 0px 0px 0px black;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
-div.button:hover, div.cartButton:hover {
+
+div.button:hover,
+div.cartButton:hover {
     transform: scale(1.2);
     background-color: #555;
     box-shadow: 0px 0px 5px black;
 }
+
+form {
+    margin: 10px;
+    padding: 10px;
+    background-image: linear-gradient(to right, lime, rgb(34, 34, 34));
+    border-radius: 20px;
+    color: black;
+}
+
+input {
+    margin-bottom: 10px;
+    background-color: black;
+    color: lime;
+}
+
 div.popup {
     display: none;
     position: absolute;
     top: 100%;
-    right: 25%;
+    right: 35%;
     background: white;
     padding: 1rem;
     border: 1px solid #ccc;
     z-index: 999;
+    border-radius: 10px;
 }
+
+#cartPopupTotal {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 div.list {
     width: 1000px;
     height: auto;
@@ -106,6 +141,7 @@ div.list {
     flex-wrap: wrap;
 
 }
+
 div.item {
     height: 200px;
     width: 450px;
@@ -115,27 +151,33 @@ div.item {
     margin-bottom: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 div.item:hover {
     transform: scale(1.1);
     background-color: white;
     box-shadow: 0px 0px 5px black;
 }
+
 img.productImage {
     float: left;
     height: 200px;
     width: 200px;
     border-radius: 10px;
 }
+
 h1.productTitle {
     padding-top: 5px;
 }
+
 div.productDesc {
     padding-top: 5px;
     height: 100px;
 }
+
 p.productDesc {
-    font-size: x-large;  
+    font-size: x-large;
 }
+
 img.addToCart {
     float: right;
     height: 50px;
@@ -144,9 +186,11 @@ img.addToCart {
     scale: 1;
     transition: transform 0.2s ease;
 }
+
 img.addToCart:hover {
     transform: scale(1.2);
 }
+
 div.text {
     padding: 20px;
     width: 1000px;
@@ -154,6 +198,7 @@ div.text {
     text-align: center;
     color: lime;
 }
+
 table {
     margin-left: auto;
     margin-right: auto;
@@ -161,43 +206,65 @@ table {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-th, td {
+
+th,
+td {
     padding: 5px;
     border: 1px solid lime;
 }
+
 img.cartIcon {
     height: 50px;
     width: 50px;
     padding-right: 10px;
-    float: right;   
+    float: right;
 }
+
 @media screen and (max-width: 1000px) {
+    body {
+        background-image: none;
+        background-color: rgb(34, 34, 34);
+    }
+
     div.container {
         width: 100%;
         height: 100%;
     }
+
     div.nav {
         width: 100%;
     }
+
     div.list {
         width: 100%;
     }
+
     div.text {
         width: 100%;
     }
+
     div.item {
         width: 400px;
     }
+
     div.GridContainer {
-        grid-template-areas: 
-            "content content",
-            "content content",
-            "content content";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "content",
+            "content",
+            "content";
     }
+
     div.advertisement {
         display: none;
     }
+
+    div.popup {
+        right: 25%;
+    }
 }
+
 @media screen and (max-width: 600px) {
     div.button {
         width: 70px;

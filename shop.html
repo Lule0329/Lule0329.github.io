@@ -34,11 +34,16 @@
                         <p>Cart</p>
                     </div>
                 </a>
-                
+
                 <div class="popup" id="cart-popup">
                     <h2>Your Cart</h2>
                     <ul id="cart-items"></ul>
-                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <p id="cartPopupTotal">Total: $<span id="cart-total">0.00</span></p>
+                    <a href="https://en.wikipedia.org/wiki/Stupidity">
+                        <div class="button">
+                            <p>Checkout</p>
+                        </div>
+                    </a>
                 </div>
 
                 <a href="about.html">
@@ -179,17 +184,35 @@
                     }
 
                     function updateCart() {
+                        const cartItemsEl = document.getElementById('cart-items');
+                        const cartTotalEl = document.getElementById('cart-total');
+
                         cartItemsEl.innerHTML = '';
                         let total = 0;
 
-                        cart.forEach(item => {
+                        cart.forEach((item, index) => {
                             total += item.price * item.quantity;
+
                             const li = document.createElement('li');
-                            li.textContent = `${item.name} x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+                            li.innerHTML = `
+            ${item.name} x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}
+            <button class="remove-button" data-index="${index}">Remove</button>
+        `;
+
                             cartItemsEl.appendChild(li);
                         });
 
                         cartTotalEl.textContent = total.toFixed(2);
+
+                        // Lägg till event listeners på alla remove-knappar
+                        document.querySelectorAll('.remove-button').forEach(button => {
+                            button.addEventListener('click', function () {
+                                const index = this.getAttribute('data-index');
+                                cart.splice(index, 1); // ta bort från cart
+                                updateCart(); // uppdatera visningen
+                                saveCart();   // spara till localStorage
+                            });
+                        });
                     }
 
                     document.addEventListener('DOMContentLoaded', () => {
