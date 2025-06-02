@@ -276,4 +276,8 @@ img.cartIcon {
     div.button {
         width: 70px;
     }
+
+    div.button {
+        width: 100px;
+    }
 }
